@@ -6,10 +6,10 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
   const lowerCasePage = page.toLowerCase();
   return (
     <AnchorLink
-      className={`${selectedPage === lowerCasePage ? "text-yellow" : ""}
+      className={`${selectedPage === lowerCasePage ? "text-yellow" : "" } 
         hover:text-yellow transition duration-500`}
       href={`#${lowerCasePage}`}
-      onClick={() => selectedPage(lowerCasePage)}
+      onClick={() => setSelectedPage(lowerCasePage)}
     >
       {page}
     </AnchorLink>
@@ -22,7 +22,7 @@ const Navbar = ({isAtTop, selectedPage, setSelectedPage }) => {
   const navBackground = isAtTop ? "" : "bg-red";
   
   return (
-    <nav className={`z-40 w-full fixed top-0 py-6`}>
+    <nav className={`${navBackground} z-40 w-full fixed top-0 py-6`}>
       <div className="flex items-center justify-between mx-auto w-5/6">
         <h4 className="font-playfair text-3xl font bold">STP</h4>
 
