@@ -4,7 +4,8 @@ import Landing from "./scenes/Landing";
 import Dots from "./scenes/Dots";
 import useMediaQuery from "./hooks/useMediaQuery";
 import LineGradient from "./components/LineGradient";
-import Skills from "./scenes/Skills"
+import Skills from "./scenes/Skills";
+import Projects from "./scenes/Projects";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
@@ -29,16 +30,18 @@ function App() {
       />
       <div className="w-5/6 mx-auto md:h-full">
         {isAboveMediumScreens && (
-          <Dots
-            selectedPage={selectedPage}
-            setSelectedPage={setSelectedPage}
-          />
+          <Dots selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
         )}
         <Landing setSelectedPage={setSelectedPage} />
       </div>
       <LineGradient />
-      <div className="w-5/6 mx-auto md:h-full">
+      <div className="w-5/6 mx-auto">
         <Skills />
+      </div>
+
+      <LineGradient />
+      <div className="w-5/6 mx-auto ">
+        <Projects />
       </div>
     </div>
   );
