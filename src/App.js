@@ -6,7 +6,8 @@ import useMediaQuery from "./hooks/useMediaQuery";
 import LineGradient from "./components/LineGradient";
 import Skills from "./scenes/Skills";
 import Projects from "./scenes/Projects";
-
+import Contact from "./scenes/Contact";
+import Footer from "./scenes/Footer";
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
@@ -38,12 +39,16 @@ function App() {
       <div className="w-5/6 mx-auto">
         <Skills />
       </div>
-
       <LineGradient />
       <div className="w-5/6 mx-auto ">
         <Projects />
       </div>
+      <div className="w-5/6 mx-auto ">
+        <Contact />
+      </div>
+      <Footer/>
     </div>
+
   );
 }
 
